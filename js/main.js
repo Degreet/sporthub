@@ -1,8 +1,8 @@
 onload = () => {
   const $ = selector => document.querySelectorAll(selector)
   const showEl = el => {
+    el.hidden = false
     el.classList.remove("hide")
-    el.ontransitionend = () => el.hidden = false
   }
   const hideEl = el => {
     el.classList.add("hide")
