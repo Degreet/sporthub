@@ -68,10 +68,10 @@ onload = () => {
     let nextDay = weekDays[weekDays.indexOf(weekDay) + 1]
     let msg
 
-    do {
+    while (!data.daysForSport.includes(toEnglishWeekDay(nextDay))) {
       nextDay = nextDay == "суббота" ? weekDays[0]
         : weekDays[weekDays.indexOf(nextDay) + 1]
-    } while (!data.daysForSport.includes(toEnglishWeekDay(nextDay)))
+    }
     nextDay = toWhenWeekDay(nextDay)
 
     if (data.daysForSport.includes(toEnglishWeekDay(weekDay))) {
