@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SportHub</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <section id="helloScreen" class="hide">
+    <h1>Привет!</h1>
+  </section>
+  <section id="checkThisDay1" class="hide">
+    <h1>Сегодня <span class="today-week-day">вторник</span><span id="checkThisDay1Desc"></span></h1>
+    <button id="nextCheckThisDay1Btn" hidden>Далее</button>
+  </section>
+  <section id="selectDaysForSport1" class="hide">
+    <h1>Сегодня <span class="today-week-day">вторник</span>.<br>В какое время ты бы хотел заниматься?</h1>
+  </section>
+  <section id="selectDaysForSport2" class="hide">
+    <h1 id="selectDaysForSport2Title">Я бы хотел заниматься по...</h1>
+    <div id="selectWeekDaysForSport">
+      <div>
+        <input type="checkbox" checked id="mondey">
+        <label for="mondey">Понедельникам</label>
+      </div>
+      <div>
+        <input type="checkbox" id="tuesday">
+        <label for="tuesday">Вторникам</label>
+      </div>
+      <div>
+        <input type="checkbox" checked id="wednesday">
+        <label for="wednesday">Средам</label>
+      </div>
+      <div>
+        <input type="checkbox" id="thursday">
+        <label for="thursday">Четверг</label>
+      </div>
+      <div>
+        <input type="checkbox" checked id="friday">
+        <label for="friday">Пятницам</label>
+      </div>
+    </div>
+    <button id="nextBtn">Далее</button>
+  </section>
+  <section id="clockScreen" class="exercise hide">
+    <h1>Отдых (<span id="clockText">15</span> сек)</h1>
+    <div class="bg"></div>
+  </section>
+  <section id="firstExerciseScreen" class="exercise hide">
+    <h1>1 упражнение<br>Отжимания (10 раз)</h1>
+    <div class="bg"></div>
+    <button id="toSecondExerciseButton1" class="to-next-exercise-btn">Далее</button>
+  </section>
+  <section id="secondExerciseScreen" class="exercise hide">
+    <h1>2 упражнение<br>Планка (<span id="secondExerciseTimerText">30</span> секунд)</h1>
+    <div class="bg"></div>
+  </section>
+  <section id="thirdExerciseScreen" class="exercise hide">
+    <h1>3 упражнение<br>Руки вверх вниз<br>(10 раз)</h1>
+    <div class="bg"></div>
+    <button id="toFourthExerciseButton" class="to-next-exercise-btn">Далее</button>
+  </section>
+  <section id="fourthExerciseScreen" class="exercise hide">
+    <h1>4 упражнение<br>Приседания<br>(15 раз)</h1>
+    <div class="bg"></div>
+    <button id="toFifthExerciseButton" class="to-next-exercise-btn">Далее</button>
+  </section>
+  <section id="fifthExerciseScreen" class="exercise hide">
+    <h1>5 упражнение<br>Бег на месте<br>(<span id="fifthExerciseTimerText">30</span> секунд)</h1>
+    <div class="bg"></div>
+  </section>
+  <section id="endTrainingScreen" class="hide">
+    <h1>Ура! Ты завершил тренировку! След. тренировка будет в <span id="nextWeekDayForTraining">пятницу</span>, не пропусти!</h1>
+  </section>
+</body>
+</html>
