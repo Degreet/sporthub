@@ -17,7 +17,7 @@ const whenWeekDays = ["воскресенье", "понедельник", "вт�
 const engWeekDays = ["sunday", "mondey", "tuesday",
   "wednesday", "thursday", "friday", "saturday"]
 
-onload = () => $("section").forEach(section => section.style.transition = ".3s")
+onload = () => $("section").forEach(section => section.style.transition = "2s")
 const weekDay = weekDays[new Date().getDay()]
 const toEnglishWeekDay = day => engWeekDays[weekDays.indexOf(day)]
 const toRussianWeekDay = day => weekDays[engWeekDays.indexOf(day)]
