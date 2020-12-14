@@ -17,7 +17,6 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: 2s;
 }
 
 section h1 {
