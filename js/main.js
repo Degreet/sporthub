@@ -1,6 +1,12 @@
 const $ = selector => document.querySelectorAll(selector)
-const showEl = el => el.classList.remove("hide")
-const hideEl = el => el.classList.add("hide")
+const showEl = el => {
+  el.classList.remove("hide")
+  el.ontransitionend = () => el.hidden = false
+}
+const hideEl = el => {
+  el.classList.add("hide")
+  el.ontransitionend = () => el.hidden = true
+}
 const setOnTransitionEnd = (el, fn, timeout) =>
   el.ontransitionend = () => setTimeout(fn, timeout)
 
@@ -62,7 +68,7 @@ function checkThisDay() {
 
   do {
     nextDay = nextDay == "суббота" ? weekDays[0]
-      : weekDays[weekDays.indexOf(weekDay) + 1]
+      : weekDays[weekDays.indexOf(nextDay) + 1]
   } while (!data.daysForSport.includes(toEnglishWeekDay(nextDay)))
   nextDay = toWhenWeekDay(nextDay)
 
